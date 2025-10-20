@@ -1,5 +1,6 @@
 import json
 
+
 def filter_users_by_name(name):
     with open("users.json", "r") as file:
         users = json.load(file)
@@ -31,7 +32,9 @@ def filter_users_by_email(email):
 
 
 if __name__ == "__main__":
-    filter_option = input("What would you like to filter by? (Currently supports 'name', 'age', and 'email'): ").strip().lower()
+    filter_option = input(
+        "What would you like to filter by? (Currently supports 'name', 'age', and 'email'): "
+    ).strip().lower()
 
     if filter_option == "name":
         name_to_search = input("Enter a name to filter users: ").strip()
